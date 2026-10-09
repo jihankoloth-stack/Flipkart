@@ -21,7 +21,9 @@ class _SplashscreenState extends State<Splashscreen> {
     Navigator.pushReplacement(
       context,
        MaterialPageRoute(
-        builder: ((context) =>Loginscreen() ),)
+        builder: ((context) =>Loginscreen() ),
+         
+         )
         );
     },
     );
@@ -38,7 +40,7 @@ class _SplashscreenState extends State<Splashscreen> {
           color: Colors.black,
           boxShadow:[ BoxShadow(color: Colors.black,
           offset: Offset(5, 5),
-          blurRadius: 30,
+          blurRadius:  30,
           
           ),
           ],
@@ -51,7 +53,7 @@ class _SplashscreenState extends State<Splashscreen> {
           child: Image.asset("assets/images/flipkart.png"),
         ),
 
-      ),
+        ),
       
     );
   }

@@ -6,11 +6,47 @@ class Loginscreen extends StatefulWidget {
 
   @override
   State<Loginscreen> createState() => _LoginscreenState();
-
 }
 
 class _LoginscreenState extends State<Loginscreen> {
-  
+final emailController =TextEditingController();
+final passwordController =TextEditingController();
+
+void login(){
+  String email = emailController.text;
+  String password = passwordController.text;
+
+  if (email=="jihan" && password=="1234"){
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context)=>Homepage()
+        ),
+      );
+  }else{
+    showDialog(
+      context: context,
+     builder: (context){
+      return AlertDialog(
+        title: Text("Login failed"),
+        content: Text("invaild email or password "),
+        actions: [
+          TextButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+             child:Text("OK")
+             )
+        ],
+
+      );
+     }
+     
+     );
+  }
+
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,57 +61,49 @@ class _LoginscreenState extends State<Loginscreen> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
-                BoxShadow(color: Colors.grey.shade400,
-                offset: Offset(0, 5),
-                blurRadius: 15,
+                BoxShadow(
+                  color: Colors.grey.shade400,
+                  offset: Offset(0, 5),
+                  blurRadius: 15,
                 ),
-              
-              ]
+              ],
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("LOGIN",
-                style:TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                
+                Text(
+                  "LOGIN",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                ),
-                SizedBox(height: 5,),
+                SizedBox(height: 5),
                 // subtitle
-                Text("Get access to your Orders, Wishlist and Recommendation",
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold,
-
+                Text(
+                  "Get access to your Orders, Wishlist and Recommendation",
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
                 ),
-                ),
-                SizedBox(height: 35,),
+                SizedBox(height: 35),
 
-                 Text("Enter your Email",
-                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                 ),
-                 ),
-                 SizedBox(height: 8,),
-                 TextField(
-              
+                Text(
+                  "Enter your Email",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                SizedBox(height: 8),
+                TextField(
+                  controller: emailController,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.email_outlined),
                     hintText: "enter your Email",
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20,),
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    labelText:"Email",
-
+                    labelText: "Email",
                   ),
-                 ),
+                ),
 
-                 SizedBox(height: 20,),
+                SizedBox(height: 20),
 
-                 TextField(
+                TextField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: "Password",
@@ -83,88 +111,85 @@ class _LoginscreenState extends State<Loginscreen> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     label: Text("Password"),
-                    prefixIcon: Icon(Icons.lock_outline)
+                    prefixIcon: Icon(Icons.lock_outline),
                   ),
-                 ),
-                 SizedBox(height: 10,),
+                ),
+                SizedBox(height: 10),
 
-                 Align(alignment: Alignment.centerRight,        
-                child:  TextButton(onPressed: (){},
-                  child:Text("forgot?",
-                  style: TextStyle(
-                   fontWeight: FontWeight.bold,
-                   color: Colors.red[300],
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "forgot?",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red[300],
+                      ),
+                    ),
                   ),
-                  ),
-                  ),
-                 ),
-                 SizedBox(height:25),
+                ),
+                SizedBox(height: 25),
 
-                 Row(
+                Row(
                   children: [
                     Expanded(
-                      child:SizedBox(
+                      child: SizedBox(
                         height: 55,
                         child: ElevatedButton(
-                          onPressed: (){
-                            Navigator.push(
-                              context,
-                            MaterialPageRoute(
-                            builder:(context)=>Homepage() ),
-
-                            );
+                          onPressed: () {
+                          login();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueAccent,
                             foregroundColor: Colors.white,
-                            elevation: 15,
-                            shadowColor: Colors.grey,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)
-                            )
-                          ),
-                          
-                           child: Text("LOGIN",
-                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15
-                           ),
-                           )
-                           ),
-                      ),
-                      ),
-                      SizedBox(width: 15,),
-                      Expanded(
-                        child:SizedBox(height: 55,
-                        child: OutlinedButton(onPressed: (){},
-                        style: ElevatedButton.styleFrom(
-                          foregroundColor: Colors.blueAccent,
-                          side:BorderSide(
-                            color:Colors.blueAccent,
-                          )
-                        ),
-                         child: Text("SIGN UP",
-                         style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                         ),
-                         )
-                         ),
-                        ),
-                        
-                        ),
-                 
-                  ],
-                 ),
-                 SizedBox(height: 30,),
+                            elevation: 5,
+                            
 
-              
+                            shadowColor: Colors.grey.withOpacity(0.5),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+
+                          child: Text(
+                            "LOGIN",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 15),
+                    Expanded(
+                      child: SizedBox(
+                        height: 55,
+                        child: OutlinedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.blueAccent,
+                            side: BorderSide(color: Colors.blueAccent),
+                          ),
+                          child: Text(
+                            "SIGN UP",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 30),
               ],
             ),
           ),
         ),
       ),
-
     );
   }
 }

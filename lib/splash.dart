@@ -31,26 +31,24 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: Colors.yellow[500],
       body: Center(
         child: Container(
           
           // color:Colors.black,
           decoration: BoxDecoration(
-          color: Colors.black,
-          boxShadow:[ BoxShadow(color: Colors.black,
-          offset: Offset(5, 5),
-          blurRadius:  30,
-          
-          ),
-          ],
-        
+          color: Colors.yellow,
           ),
     
+          height: 180,
+          width: 180,
           
-          width: 257,
-          height: 257,
-          child: Image.asset("assets/images/flipkart.png"),
+          child: Image.asset("assets/images/flipkart.png",
+          width: 40,
+          height:40 ,
+          
+          fit: BoxFit.contain,
+          ),
         ),
 
         ),

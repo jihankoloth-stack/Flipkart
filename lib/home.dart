@@ -8,6 +8,8 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+ 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,77 +141,147 @@ class _HomepageState extends State<Homepage> {
             ],
            ),
            SizedBox(height: 15,),
-           Row(
-            children: [
-              Expanded(
-                child:Card(
-                 child: Padding(
-                  padding:EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(Icons.phone_android,
-                      size: 50,
-                      color:Colors.black,
-                      ),
-                      SizedBox(height: 5,),
-                      Text("Smartphone",
-                      style: TextStyle(
-                        fontSize: 15,
-                      ),
-                      ),
-                      SizedBox(height: 6,),
-                      Text("12,999",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
-                      ),
-                      Text("20% off",
-                      style: TextStyle(color: Colors.green[700]),
-                      ),
-                    ],
-                  ),
-                   ),
-                ),
-                 ),
-                  Expanded(
-                child:Card(
-                 child: Padding(
-                  padding:EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(Icons.headphones,
-                      size: 50,
-                      color:Colors.black,
-                      ),
-                      SizedBox(height: 5,),
-                      Text("Headphone",
-                      style: TextStyle(
-                        fontSize: 15,
-                      ),
-                      ),
-                      SizedBox(height: 6,),
-                      Text("999",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17,
-                      ),
-                      ),
-                      Text("10% off",
-                      style: TextStyle(color: Colors.green[700]),
-                      ),
-                    ],
-                  ),
-                   ),
-                ),
-                 ),
-                 
-
-            ],
+           Text("Products",
+           style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
            ),
-          
+           ),
+             SizedBox(height: 15,),
+
+             GridView.count(
+              crossAxisCount: 2,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+
+              children: [
+                Card(
+                  elevation: 3,
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child:Center(
+                            child: Image.asset("assets/images/football.jpg",),
+                          ),
+                           ),
+                           SizedBox(height: 2,),
+                           Text("FootBall",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Text(" ₹5000",
+                           style: TextStyle(fontSize: 15),
+
+                           ),
+                           Row(
+                            children: [
+                              Icon(Icons.star,color:Colors.orange,size: 18,),
+                              Text("4.5")
+                            ],
+                           ),
+                      
+
+                      ],
+                    ),
+                    ),
+                ),
+                     Card(
+                            elevation: 3,
+                            child: Padding(
+                              padding:EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child:Center(
+                                      child: Image.asset("assets/images/glass women.jpg",),
+                                    ),
+                                 ),
+                                 SizedBox(height: 5,),
+                                 Text("Sunglass: girls",
+                                 style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                 ),
+                                 ),
+                                 SizedBox(height: 5,),
+                                 Text(" ₹2000",
+                                 style: TextStyle(
+                                  fontSize: 15,
+                                 ),
+                                 ),
+                                 SizedBox(height: 5,),
+                                 Row(
+                                  children: [
+                                 Icon(Icons.star,color:Colors.orange,size:18 ,),
+                                 Text("4.5")
+
+                                  ],
+                                 ),
+                                ],
+                              ),
+                               ),
+                           ),
+                           Card(
+                            elevation: 3,
+                            child: Padding(
+                              padding:EdgeInsets.all(15),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child:Center(
+                                    child: Image.asset("assets/images/sun glass.webp"),
+                                    
+                                    ),
+                                    ),
+                                    SizedBox(height: 5,),
+                                    Text("Sunglass: boys",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    ),
+                                    SizedBox(height:5),
+                                    Text(" ₹2499",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                    ),
+                                    SizedBox(height: 5,),
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,color:Colors.orange,size: 18,),
+                                        Text("5.5")
+                                      ],
+                                    ),
+                                ],
+                              ), 
+                              ),
+                           ),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Image.asset("assets/images/lipstik.jpg") 
+                              ),
+                            ],
+                          ),
+
+                          ),
+                      ),
+              ],
+              ),
+         
           ],
             ),
               

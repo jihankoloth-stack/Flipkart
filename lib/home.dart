@@ -1,3 +1,5 @@
+import 'package:flipkart_ui/accoundpage.dart';
+import 'package:flipkart_ui/bottomnavi.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -14,6 +16,27 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(onPressed: (){
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder:(context)=>Bottomnavpag() ),
+            //   );
+          }, icon: Icon(Icons.notifications),
+          ),
+          IconButton(
+            onPressed: (){
+             Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context)=>Accountpage(),
+                ),
+                );
+            },
+             icon: Icon(Icons.person_outlined),
+             )
+        ],
         title: Row(
           children: [
             Image.asset("assets/images/flip.png",
@@ -35,7 +58,8 @@ class _HomepageState extends State<Homepage> {
         ) ,
            
       ),
-      body: SingleChildScrollView(
+      body:
+       SingleChildScrollView(
        
          child:  Padding(
             padding:EdgeInsets.all(20),
@@ -272,8 +296,251 @@ class _HomepageState extends State<Homepage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Expanded(
+                                child: Center(
                                 child: Image.asset("assets/images/lipstik.jpg") 
+
+                                ),
                               ),
+                              SizedBox(height: 5,),
+                              Text("Lipstick",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹999",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("4.5"),
+                                ],
+                              ),
+                              
+                            ],
+                          ),
+
+                          ),
+                      ),Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Center(
+                                child: Image.asset("assets/images/man shert.jpg") 
+
+                                ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("cotton shirt ",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹1999",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("4.5"),
+                                ],
+                              ),
+                              
+                            ],
+                          ),
+
+                          ),
+                      ),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Center(
+                                child: Image.asset("assets/images/shoe man.jpg",) 
+
+                                ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("Air f1",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹2999",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("5.5"),
+                                ],
+                              ),
+                              
+                            ],
+                          ),
+
+                          ),
+                      ),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Center(
+                                child: Image.asset("assets/images/shoe women.jpg") 
+
+                                ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("Puma: girls sneakers",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹1999",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("4.5"),
+                                ],
+                              ),
+                              
+                            ],
+                          ),
+
+                          ),
+                      ),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Center(
+                                child: Image.asset("assets/images/watch women.jpg") 
+
+                                ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("Watches: girls",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹499",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("4.5"),
+                                ],
+                              ),
+                              
+                            ],
+                          ),
+
+                          ),
+                      ),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Center(
+                                child: Image.asset("assets/images/watche rolax.jpg") 
+
+                                ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("Watches: Rolax",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹14000",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("5.5"),
+                                ],
+                              ),
+                              
+                            ],
+                          ),
+
+                          ),
+                      ),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
+                          padding:EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Center(
+                                child: Image.asset("assets/images/woman drass.jpg") 
+
+                                ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("Gingham Midi Dress",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              SizedBox(height: 5,),
+                              Text("₹1500",
+                              style: TextStyle(
+                                fontSize: 15
+                              ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.star,color:Colors.orange,size: 18,),
+                                  Text("4.5"),
+                                ],
+                              ),
+                              
                             ],
                           ),
 
@@ -286,6 +553,7 @@ class _HomepageState extends State<Homepage> {
             ),
               
           ),
+        
         
       ),
          

@@ -37,6 +37,7 @@ class _AccountpageState extends State<Accountpage> {
             // color: Colors.white,
             borderRadius: BorderRadius.circular(12,),
 
+
            ),
            child: Column(
             children: [
@@ -52,7 +53,7 @@ class _AccountpageState extends State<Accountpage> {
               SizedBox(height: 15,),
               Text("Jihan",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w900,
                 fontSize: 20,
 
               ),

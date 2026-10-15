@@ -1,4 +1,3 @@
-import 'package:flipkart_ui/bottomnavi.dart';
 import 'package:flipkart_ui/splash.dart';
 import 'package:flutter/material.dart';
 

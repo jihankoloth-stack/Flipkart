@@ -16,7 +16,7 @@ class BottomNav
 
 class _HomepageState extends State<BottomNav
 > {
-  int currentIndex = 0;
+  int currentIndex = 0;        
 
   final List<Widget> pages = [
     Homepage(),

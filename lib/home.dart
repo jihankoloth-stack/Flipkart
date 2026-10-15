@@ -1,5 +1,4 @@
 import 'package:flipkart_ui/accoundpage.dart';
-import 'package:flipkart_ui/bottomnavi.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {

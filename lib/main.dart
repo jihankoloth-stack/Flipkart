@@ -1,3 +1,4 @@
+import 'package:flipkart_ui/bottomnavi.dart';
 import 'package:flipkart_ui/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class JinuApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title:"JKApp",
       home:Splashscreen(),
+    
     );
   }
 }

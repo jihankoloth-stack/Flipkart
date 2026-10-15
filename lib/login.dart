@@ -1,3 +1,4 @@
+import 'package:flipkart_ui/bottomnavi.dart';
 import 'package:flipkart_ui/home.dart';
 import 'package:flutter/material.dart';
 
@@ -139,6 +140,10 @@ void login(){
                         child: ElevatedButton(
                           onPressed: () {
                           login();
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context)=>BottomNav(),),
+                          );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueAccent,

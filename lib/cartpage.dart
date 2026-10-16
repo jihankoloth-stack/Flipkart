@@ -199,7 +199,7 @@ class _CartpageState extends State<Cartpage> {
                             padding: EdgeInsets.symmetric(
                               horizontal: 13,
                             ),
-                            minimumSize:Size(0, 28)
+                            minimumSize:Size(0, 20)
                           ),
                           child:Text("SAVE LATER",
                           style: TextStyle(
@@ -217,7 +217,7 @@ class _CartpageState extends State<Cartpage> {
                        padding: EdgeInsets.symmetric(
                         horizontal: 25,
                        ),
-                       minimumSize: Size(0, 19)
+                       minimumSize: Size(0, 20)
                        ),
                         child: Text("DELETE",
                         style: TextStyle(
@@ -245,7 +245,7 @@ class _CartpageState extends State<Cartpage> {
             elevation: 2,
             color: Colors.white,
             child: Padding(
-              padding: EdgeInsets.all(12),
+              padding: EdgeInsets.all(13),
               child:Column(
                 children: [
                   Align(alignment:Alignment.centerLeft,
@@ -292,7 +292,7 @@ class _CartpageState extends State<Cartpage> {
                     ),
                    ],
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 15,),
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -308,12 +308,60 @@ class _CartpageState extends State<Cartpage> {
                       
                        ), 
                       ),
+                      SizedBox(width: 5,),
+                      Expanded(
+                        child:OutlinedButton.icon(
+                          onPressed: (){},
+                        icon: Icon(Icons.account_balance_wallet_outlined,
+                        size: 15,
+                        ),
+                        label:Text("UPI",
+                        style: TextStyle(
+                          fontSize: 11,
+                        ),
+                        ),
+                         ),
+                         ),
+                         SizedBox(width: 5,),
+                         Expanded(
+                          child:OutlinedButton.icon(
+                            onPressed: (){},
+                            icon: Icon(Icons.mail_outline,
+                            size: 15,
+                            ),
+                            label: Text("COD",
+                            style: TextStyle(
+                              fontSize: 11,
+                            ),
+                            ),
+                           ),
+                           ),
                   ],
                   ),
                 ],
               ) ,
               ),
           ),
+          SizedBox(
+            width:double.infinity,
+            height: 50,
+            child: ElevatedButton(onPressed: (){},
+            style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.yellow,
+            foregroundColor: Colors.black,
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            )
+            ),
+             child: Text("Pay ₹80000",
+             style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+             ),
+             ),
+            ),
+          )
 
         ],
        ),

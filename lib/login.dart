@@ -1,6 +1,7 @@
 import 'package:flipkart_ui/bottomnavi.dart';
 import 'package:flipkart_ui/home.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Loginscreen extends StatefulWidget {
   const new({super.key});
@@ -18,10 +19,11 @@ void login(){
   String password = passwordController.text;
 
   if (email=="jihan" && password=="1234"){
+
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context)=>Homepage()
+        builder: (context)=>BottomNav()
         ),
       );
   }else{
@@ -139,11 +141,8 @@ void login(){
                         height: 55,
                         child: ElevatedButton(
                           onPressed: () {
-                          login();
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(builder: (context)=>BottomNav(),),
-                          );
+                            
+                        
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueAccent,

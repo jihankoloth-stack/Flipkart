@@ -11,11 +11,11 @@ class BottomNav
 
   @override
   State<BottomNav
-  > createState() => _HomepageState();
+  > createState() => _BottomNavState();
 }
 
-class _HomepageState extends State<BottomNav
-> {
+class _BottomNavState extends State<BottomNav> {
+  
   int currentIndex = 0;        
 
   final List<Widget> pages = [
@@ -28,7 +28,6 @@ class _HomepageState extends State<BottomNav
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(index: currentIndex, children: pages),
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,

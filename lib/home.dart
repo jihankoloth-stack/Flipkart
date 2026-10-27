@@ -172,379 +172,291 @@ class _HomepageState extends State<Homepage> {
            ),
              SizedBox(height: 15,),
 
+// cardss.....
+
              GridView.count(
               crossAxisCount: 2,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
+              childAspectRatio: 0.75,
+
 
               children: [
                 Card(
                   elevation: 3,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(15),
+                  ),
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
-                          child:Center(
-                            child: Image.asset("assets/images/football.jpg",),
+                        Expanded( 
+                          child:Container(
+                         width: double.infinity,
+                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.amber,
+                         ),
+                         child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                           child: Image.asset("assets/images/football.jpg",
+                           fit: BoxFit.cover,
+                           
+                           ),
+                         ),
                           ),
                            ),
-                           SizedBox(height: 2,),
+                           SizedBox(height: 8,),
                            Text("FootBall",
                            style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            fontSize: 15,
                            ),
                            ),
                            SizedBox(height: 3,),
-                           Text(" ₹5000",
-                           style: TextStyle(fontSize: 15),
+                           Text("3 Colors",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
 
                            ),
-                           Row(
-                            children: [
-                              Icon(Icons.star,color:Colors.orange,size: 18,),
-                              Text("4.5")
-                            ],
                            ),
+                           SizedBox(height: 3,),
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("⭐4.5"),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  padding: EdgeInsets.all(1),
+                                  backgroundColor: Colors.grey.shade300,
+                                  foregroundColor: Colors.black,
+                                  
+                                ),
+                                 child: Text("\$40.00")
+                                 ),
+                              )
+                            ],
+                           )
                       
 
                       ],
                     ),
                     ),
                 ),
-                     Card(
-                            elevation: 3,
-                            child: Padding(
-                              padding:EdgeInsets.all(10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child:Center(
-                                      child: Image.asset("assets/images/glass women.jpg",),
-                                    ),
-                                 ),
-                                 SizedBox(height: 5,),
-                                 Text("Sunglass: girls",
-                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                 ),
-                                 ),
-                                 SizedBox(height: 5,),
-                                 Text(" ₹2000",
-                                 style: TextStyle(
-                                  fontSize: 15,
-                                 ),
-                                 ),
-                                 SizedBox(height: 5,),
-                                 Row(
-                                  children: [
-                                 Icon(Icons.star,color:Colors.orange,size:18 ,),
-                                 Text("4.5")
-
-                                  ],
-                                 ),
-                                ],
-                              ),
-                               ),
+                Card(
+                  elevation: 3,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(15),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded( 
+                          child:Container(
+                         width: double.infinity,
+                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.amber,
+                         ),
+                         child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                           child: Image.asset("assets/images/sun glass.webp",
+                           fit: BoxFit.cover,
+                          height: 20,
                            ),
-                           Card(
-                            elevation: 3,
-                            child: Padding(
-                              padding:EdgeInsets.all(15),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child:Center(
-                                    child: Image.asset("assets/images/sun glass.webp"),
-                                    
-                                    ),
-                                    ),
-                                    SizedBox(height: 5,),
-                                    Text("Sunglass: boys",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                    ),
-                                    SizedBox(height:5),
-                                    Text(" ₹2499",
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                    ),
-                                    ),
-                                    SizedBox(height: 5,),
-                                    Row(
-                                      children: [
-                                        Icon(Icons.star,color:Colors.orange,size: 18,),
-                                        Text("5.5")
-                                      ],
-                                    ),
-                                ],
-                              ), 
-                              ),
+                         ),
+                          ),
                            ),
-                      Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                           SizedBox(height: 8,),
+                           Text("Sun glass",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Text("5 Colors",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/lipstik.jpg") 
-
+                              Text("⭐3.5"),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  padding: EdgeInsets.all(1),
+                                  backgroundColor: Colors.grey.shade300,
+                                  foregroundColor: Colors.black,
+                                  
                                 ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("Lipstick",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹999",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("4.5"),
-                                ],
-                              ),
-                              
+                                 child: Text("\$20.00")
+                                 ),
+                              )
                             ],
-                          ),
+                           )
+                      
 
+                      ],
+                    ),
+                    ),
+                ),
+                Card(
+                  elevation: 3,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(15),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded( 
+                          child:Container(
+                         width: double.infinity,
+                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.amber,
+                         ),
+                         child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                           child: Image.asset("assets/images/watche rolax.jpg",
+                           fit: BoxFit.cover,
+                           
+                           ),
+                         ),
                           ),
-                      ),Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                           ),
+                           SizedBox(height: 8,),
+                           Text("Rolax watch",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Text("3 Colors",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/man shert.jpg") 
-
+                              Text("⭐5.5"),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  padding: EdgeInsets.all(1),
+                                  backgroundColor: Colors.grey.shade300,
+                                  foregroundColor: Colors.black,
+                                  
                                 ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("cotton shirt ",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹1999",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("4.5"),
-                                ],
-                              ),
-                              
+                                 child: Text("\$400.00")
+                                 ),
+                              )
                             ],
-                          ),
+                           )
+                      
 
+                      ],
+                    ),
+                    ),
+                ),
+                Card(
+                  elevation: 3,
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(15),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded( 
+                          child:Container(
+                         width: double.infinity,
+                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color: Colors.amber,
+                         ),
+                         child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                           child: Image.asset("assets/images/shoe man.jpg",
+                           fit: BoxFit.cover,
+                           
+                           ),
+                         ),
                           ),
-                      ),
-                      Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                           ),
+                           SizedBox(height: 8,),
+                           Text("Nike Air max",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Text("2 Colors",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/shoe man.jpg",) 
-
+                              Text("⭐5.5"),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  padding: EdgeInsets.all(1),
+                                  backgroundColor: Colors.grey.shade300,
+                                  foregroundColor: Colors.black,
+                                  
                                 ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("Air f1",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹2999",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("5.5"),
-                                ],
-                              ),
-                              
+                                 child: Text("\$250.00")
+                                 ),
+                              )
                             ],
-                          ),
+                           )
+                      
 
-                          ),
-                      ),
-                      Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/shoe women.jpg") 
+                      ],
+                    ),
+                    ),
+                ),
+                
 
-                                ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("Puma: girls sneakers",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹1999",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("4.5"),
-                                ],
-                              ),
-                              
-                            ],
-                          ),
 
-                          ),
-                      ),
-                      Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/watch women.jpg") 
-
-                                ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("Watches: girls",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹499",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("4.5"),
-                                ],
-                              ),
-                              
-                            ],
-                          ),
-
-                          ),
-                      ),
-                      Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/watche rolax.jpg") 
-
-                                ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("Watches: Rolax",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹14000",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("5.5"),
-                                ],
-                              ),
-                              
-                            ],
-                          ),
-
-                          ),
-                      ),
-                      Card(
-                        elevation: 3,
-                        child: Padding(
-                          padding:EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Center(
-                                child: Image.asset("assets/images/woman drass.jpg") 
-
-                                ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("Gingham Midi Dress",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                              ),
-                              SizedBox(height: 5,),
-                              Text("₹1500",
-                              style: TextStyle(
-                                fontSize: 15
-                              ),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.star,color:Colors.orange,size: 18,),
-                                  Text("4.5"),
-                                ],
-                              ),
-                              
-                            ],
-                          ),
-
-                          ),
-                      ),
+                    
+                      
               ],
               ),
          

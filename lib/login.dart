@@ -13,16 +13,15 @@ class _LoginscreenState extends State<Loginscreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  Future<void> login() async {
+ Future<void>login()async {
     String email = emailController.text;
     String password = passwordController.text;
 
     if (email == "jihan" && password == "1234") {
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setBool("isLoggedin", true);
-      await prefs.setString('username', email);
-      if (!mounted) return;
-
+      await prefs.setBool("isLoggedIn", true);
+      // await prefs.setString("usernmae", email);
+      if(!mounted)return;
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => BottomNav()),

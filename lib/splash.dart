@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'package:flipkart_ui/bottomnavi.dart';
 
 import 'package:flipkart_ui/login.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Splashscreen extends StatefulWidget {
   const new({super.key});
@@ -15,11 +17,26 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 4), () {
+      checkLogin();
+    });
+  }
+
+  //shared preferences
+  Future<void> checkLogin() async {
+    final prefs = await SharedPreferences.getInstance();
+    final isLoggedin = prefs.getBool("isLoggedin") ?? false;
+    if (!mounted) return;
+    if (isLoggedin) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: ((context) => Loginscreen())),
+        MaterialPageRoute(builder: (context) => BottomNav()),
       );
-    });
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Loginscreen()),
+      );
+    }
   }
 
   @override

@@ -1,54 +1,52 @@
 import 'package:flipkart_ui/bottomnavi.dart';
-import 'package:flipkart_ui/home.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Loginscreen extends StatefulWidget {
-  const new({super.key});
+  const Loginscreen({super.key});
 
   @override
   State<Loginscreen> createState() => _LoginscreenState();
 }
 
 class _LoginscreenState extends State<Loginscreen> {
-final emailController =TextEditingController();
-final passwordController =TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
-void login(){
-  String email = emailController.text;
-  String password = passwordController.text;
+  Future<void> login() async {
+    String email = emailController.text;
+    String password = passwordController.text;
 
-  if (email=="jihan" && password=="1234"){
+    if (email == "jihan" && password == "1234") {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool("isLoggedin", true);
+      await prefs.setString('username', email);
+      if (!mounted) return;
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context)=>BottomNav()
-        ),
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => BottomNav()),
       );
-  }else{
-    showDialog(
-      context: context,
-     builder: (context){
-      return AlertDialog(
-        title: Text("Login failed"),
-        content: Text("invaild email or password "),
-        actions: [
-          TextButton(
-            onPressed: (){
-              Navigator.pop(context);
-            },
-             child:Text("OK")
-             )
-        ],
-
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("Login failed"),
+            content: Text("invaild email or password "),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("OK"),
+              ),
+            ],
+          );
+        },
       );
-     }
-     
-     );
+    }
   }
-
-}
 
   @override
   Widget build(BuildContext context) {
@@ -141,14 +139,12 @@ void login(){
                         height: 55,
                         child: ElevatedButton(
                           onPressed: () {
-                            
-                        
+                            login();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueAccent,
                             foregroundColor: Colors.white,
                             elevation: 5,
-                            
 
                             shadowColor: Colors.grey.withOpacity(0.5),
                             shape: RoundedRectangleBorder(

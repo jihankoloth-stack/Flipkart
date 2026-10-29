@@ -4,19 +4,15 @@ import 'package:flipkart_ui/home.dart';
 import 'package:flipkart_ui/orderpage.dart';
 import 'package:flutter/material.dart';
 
-class BottomNav
- extends StatefulWidget {
-  const BottomNav
-  ({super.key});
+class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
 
   @override
-  State<BottomNav
-  > createState() => _BottomNavState();
+  State<BottomNav> createState() => _BottomNavState();
 }
 
 class _BottomNavState extends State<BottomNav> {
-  
-  int currentIndex = 0;        
+  int currentIndex = 0;
 
   final List<Widget> pages = [
     Homepage(),

@@ -40,7 +40,6 @@ class _BottomNavState extends State<BottomNav> {
             icon: Icon(Icons.shopping_cart),
             label: "Cart",
           ),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.receipt_long),
             label: "Orders",

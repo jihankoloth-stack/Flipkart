@@ -392,6 +392,7 @@ class _HomepageState extends State<Homepage> {
                               ),
                             ),
                           ),
+                          
                           SizedBox(height: 8),
                           Text(
                             "Nike Air max",
@@ -403,7 +404,7 @@ class _HomepageState extends State<Homepage> {
 
                           SizedBox(height: 3),
                           Text(
-                            
+
                             "2 Colors",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),

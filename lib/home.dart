@@ -400,8 +400,10 @@ class _HomepageState extends State<Homepage> {
                               fontSize: 15,
                             ),
                           ),
+
                           SizedBox(height: 3),
                           Text(
+                            
                             "2 Colors",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
